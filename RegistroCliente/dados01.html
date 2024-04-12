@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apostando con York</title>
+    <link rel="stylesheet" href="styles/formatos.css" media="screen">
+</head>
+<body>
+    <h1>Captura de Datos Clientes</h1>
+    <form name="formita" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+            <div>
+                <label>Nombre:</label>
+                <input type="text" id="txtNomb" maxlength="15" size="20" required autofocus>
+            </div>
+            <div>
+                <label>Año de Nacimiento:</label>
+                <input type="number" id="txtFechaNac" min="1900" max="2023" required>
+            </div>            
+            <div>
+                <label>Monto a apostar:</label>
+                <input type="text" id="txtMonto" maxlength="30" size="35" required>
+            </div>
+            <div>
+                <label>Cantidad Dados:</label>
+                <input type="radio" name="txtCantDados" value="2"> 2
+                <input type="radio" name="txtCantDados" value="3"> 3
+            </div>
+        </fieldset>
+        <div>
+            <button type="button" id="btnGuardar">Guardar</button>
+            <button type="button" id="btnMostrar">Mostrar</button>
+        </div>
+        <input type="hidden" name="oculto1" value="Morticia">
+    </form>
+
+    <div id="Datos"></div>
+
+    <script src="codes/datos01.js"></script>
+</body>
+</html>
