@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos para comenzar a juegar</title>
+    <link rel="stylesheet" href="styles/formato2.css" media="screen">
+</head>
+<body>
+    <h1>Datos para comenzar a juegar</h1>
+    <form name="formita" enctype="application/x-www-form-urlencoded">
+        <fieldset>
+            <div>
+                <label>Nombre de Jugador:</label>
+                <input type="text" id="txtNomb" maxlength="15" size="20" required autofocus>
+            </div>
+            <div>
+                <label>Monto a apostar:</label>
+                <input type="text" id="txtMonto_Apostar" maxlength="15" size="20" required>    
+            </div>
+            <div id="seleccionDados">
+                <label>Cantidad de dados:</label>
+                <input type="radio" id="dosDados" name="cantidadDados" value="2" checked>
+                <label for="dosDados" class="inline">2 dados</label>
+                <input type="radio" id="tresDados" name="cantidadDados" value="3">
+                <label for="tresDados" class="inline">3 dados</label>
+            </div>
+            <div>
+                <button type="button" id="btnAceptar">Aceptar</button>
+            </div>
+        </fieldset>
+    </form>
+    <div id="Datos"></div>
+    <script src="codes/registro.js"></script>
+</body>
+</html>

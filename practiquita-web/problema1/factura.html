@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="10;url=combos.html"> <!-- Redirige a combos.html después de 10 segundos -->
+    <link rel="stylesheet" href="factura.css"> <!-- Asegúrate de que la ruta al archivo CSS sea correcta -->
+    <title>Factura</title>
+</head>
+<body>
+    <div class="factura-container">
+        <h1>Universidad Técnica Nacional</h1>
+        <h3>Sistema Integrado de Sodas Universitaria</h3>
+        <h2>Factura</h2>
+        <p><strong>Factura No:</strong> 00000001</p>
+        <p><strong>Fecha y hora del servidor:</strong> <span id="fechaHora"></span></p>
+        <p><strong>Cliente:</strong> <span id="cliente"></span></p>
+        <p><strong>Plato Fuerte:</strong> <span id="platoFuerte"></span></p>
+        <p><strong>Opcionales:</strong> <span id="opcionales"></span></p>
+        <p><strong>Bebida:</strong> <span id="bebida"></span></p>
+        <p><strong>Subtotal:</strong> <span id="subtotal"></span> ¢</p>
+        <p><strong>Impuestos 15% (IVA):</strong> <span id="iva"></span> ¢</p>
+        <p><strong>Total:</strong> <span id="total"></span> ¢</p>
+    </div>
+    <script>
+        function cargarDatos() {
+            const pedido = JSON.parse(localStorage.getItem('pedidoActual'));
+            if (pedido) {
+                const subtotal = parseFloat(pedido.total);
+                const iva = subtotal * 0.15;
+                const total = subtotal + iva;
+
+                document.getElementById('cliente').textContent = pedido.nombre;
+                document.getElementById('platoFuerte').textContent = pedido.platoFuerte;
+                document.getElementById('opcionales').textContent = pedido.extras.join(', ');
+                document.getElementById('bebida').textContent = pedido.bebida;
+                document.getElementById('subtotal').textContent = subtotal.toFixed(2);
+                document.getElementById('iva').textContent = iva.toFixed(2);
+                document.getElementById('total').textContent = total.toFixed(2);
+            }
+            document.getElementById('fechaHora').textContent = new Date().toLocaleString();
+            // Limpiar LocalStorage después de mostrar los datos
+            setTimeout(() => {
+                localStorage.removeItem('pedidoActual');
+            }, 10000);
+        }
+
+        window.onload = cargarDatos;
+    </script>
+</body>
+</html>

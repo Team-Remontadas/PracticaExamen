@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Factura de Restaurante</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Restaurante Buen Sabor</h1>
+    <form id="platosForm">
+        <h2>Elige tu Plato Fuerte</h2>
+        <div>
+            <input type="checkbox" id="polloAsado" name="platoFuerte" value="Pollo Asado" data-price="15">
+            <label for="polloAsado">Pollo Asado - $15</label>
+        </div>
+        <div>
+            <input type="checkbox" id="carneAsada" name="platoFuerte" value="Carne Asada" data-precio="2000">
+            <label for="carneAsada">Carne Asada</label>
+        </div>
+        <div>
+            <input type="checkbox" id="pescadoFrito" name="platoFuerte" value="Pescado Frito" data-precio="18000 ">
+            <label for="pescadoFrito">Pescado Frito - $18</label>
+        </div>
+        <div>
+            <input type="checkbox" id="vegetariano" name="platoFuerte" value="Plato Vegetariano" data-precio="12 ">
+            <label for="vegetariano">Plato Vegetariano - $12</label>
+        </div>
+        <input type="text" id="nombreCliente" placeholder="Nombre del Cliente" required>
+        <button type="button" onclick="generarFactura()">Pagar</button>
+    </form>
+
+
+
+
+    <div id="factura" style="display:none;">
+        <h2>Factura</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Plato Fuerte</th>
+                    <th>Precio</th>
+                    <th>IVA 15%</th>
+                    <th>Subtotal</th>
+                    <th>Total</th>
+                </tr>
+            </thead>
+            <tbody id="facturaBody"></tbody>
+        </table>
+    </div>
+
+    <script src="checkbox.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 20px;
+}
+
+h1 {
+    color: #0056b3;
+    text-align: center;
+}
+
+#infoJugador, #apuesta, #eleccionNumero {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+#dadosContainer, #resultadoImagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 600px;
+}
+
+.dadoImg {
+    width: 100px; /* Ajusta según tus necesidades */
+    margin: 0 10px;
+}
+
+#resultadoImagen {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Distribuye el espacio entre la imagen y el texto del resultado */
+}
+
+#imgResultado {
+    display: block; /* Asegura que la imagen se muestre cuando tenga una fuente */
+    max-width: 80%; /* Ajusta el tamaño de la imagen de resultado */
+}
+
+#resultado {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+input[type="number"] {
+    width: 150px;
+    padding: 8px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #003580;
+}
+
+#btnJugar {
+    display: block;
+    width: 200px;
+    margin: 20px auto; /* Centra el botón debajo de los elementos de juego */
+}

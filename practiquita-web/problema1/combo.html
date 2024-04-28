@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="combo.css">
+    <script src="script.js" defer></script>
+    <title>Combitos xd</title>
+</head>
+<body>
+    <div>
+        Cliente: <input type="text" id="txtNomb">
+    </div>
+    <div class="contenedor">
+        <div class="combo1">
+            <h2>Combo 1</h2>
+            <div class="menus">
+                <select name="plato_fuerte" id="cmb1opciones">
+                    <option value="pollo">Pollo en salsa blanca con hongos</option>
+                    <option value="costilla">Costilla de cerdo agridulce</option>
+                    <option value="pescado">Pescado en salsa de ostiones</option>
+                    <option value="beefsteak">Beefsteak a la barbacoa</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="combo2">
+            <h2>Combo 2</h2>
+            <div class="checkbox_div">
+                <input type="checkbox" id="opcion1"> Aros de Cebolla
+                <br>
+                <input type="checkbox" id="opcion2"> Vinagreta
+                <br>
+                <input type="checkbox" id="opcion3"> Verduras al vapor
+                <br>
+                <input type="checkbox" id="opcion4"> Tortilla Casera
+                <br>
+                <input type="checkbox" id="opcion5"> Puré nuestra tierra
+                <br>
+            </div>
+        </div>
+
+        <div class="combo3">
+            <h2>Combo 3</h2>
+            <input type="radio" id="bebida1" name="bebida"> Gaseosa
+            <br>
+            <input type="radio" id="bebida2" name="bebida"> Natural (500ml)
+            <br>
+            <input type="radio" id="bebida3" name="bebida"> Café Negro
+            <br>
+            <input type="radio" id="bebida4" name="bebida"> Café con leche
+            <br>
+            <input type="radio" id="bebida5" name="bebida"> Agua (250ml)
+            <br>
+        </div>
+    </div>
+    <div class="botones">
+        <button id="btnCancelar">Cancelar</button>
+        <button id="btnAceptar">Aceptar</button>
+    </div>
+    <div id="Datos"></div>
+
+    <script src="codes/combo.js"></script>
+</body>
+</html>

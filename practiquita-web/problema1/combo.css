@@ -1,0 +1,68 @@
+.contenedor {
+    display: flex;
+    width: 700px;
+    height: 210px;
+}
+
+.combo1{
+    height: 200px;
+    width: 300px;
+    background-color: rgb(209, 190, 255);
+}
+
+.combo1 h2{
+    margin-left: 30px;
+}
+
+.combo2 h2{
+    margin-left: 30px;
+}
+.combo3 h2{
+    margin-left: 30px;
+}
+
+.combo1 .menus select{
+    margin-left: 30px;
+    height: 30px;
+    width: 130px;
+}
+.combo2 {
+    margin-left: 30px;
+    height: 200px;
+    width: 300px;
+    background-color: rgb(180, 255, 211);
+}
+
+.combo3 {
+    margin-left: 30px;
+    height: 200px;
+    width: 300px;
+    background-color: rgb(255, 174, 127);
+}
+
+.combo3 input {
+    margin-left: 30px;
+}
+
+.checkbox_div {
+    height: 50px;
+    margin-left: 30px;
+}
+
+.botones {
+    margin-top: 10px;
+    margin-left: 5px;
+
+}
+
+.botones a {
+    text-decoration: none;
+    color: black;
+    border: 2px solid;
+    padding: 5px;
+
+}
+
+
+
+
